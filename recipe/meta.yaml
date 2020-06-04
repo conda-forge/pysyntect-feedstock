@@ -29,6 +29,7 @@ requirements:
     - libclang
     - maturin
     - toml
+    - pip
   host:
     - python
     - pip
