@@ -10,7 +10,7 @@ source:
   sha256: ab7f973bbfb46212c2603a2e80a16d679226e239ea30e96351e9b0cbcffe53bd
 
 build:
-  number: 0
+  number: 1
   # the distributed binaries are already relocatable
   binary_relocation: false
   missing_dso_whitelist:
