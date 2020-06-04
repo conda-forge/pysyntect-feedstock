@@ -1,5 +1,5 @@
 {% set name = "pysyntect" %}
-{% set version = "0.1.2" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4caeb16598f2369b1e325b451023521684f3d8b918eef36e9e4a05395fffdbd1
+  sha256: ab7f973bbfb46212c2603a2e80a16d679226e239ea30e96351e9b0cbcffe53bd
 
 build:
-  number: 1
+  number: 0
   # the distributed binaries are already relocatable
   binary_relocation: false
   missing_dso_whitelist:
-   - /usr/lib/libresolv.9.dylib  # [osx]
+    - /usr/lib/libresolv.9.dylib  # [osx]
 
 requirements:
   build:
