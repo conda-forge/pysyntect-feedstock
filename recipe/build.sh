@@ -24,4 +24,4 @@ maturin build --release -i $PYTHON
 cd target/wheels
 
 # Install wheel manually
-pip install *.whl
+$PYTHON -m pip install *.whl
