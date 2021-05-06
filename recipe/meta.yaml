@@ -1,5 +1,5 @@
 {% set name = "pysyntect" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ab7f973bbfb46212c2603a2e80a16d679226e239ea30e96351e9b0cbcffe53bd
+  sha256: ffcb227dc57bffe6e194842944f8d16e49d77d6affd08c8c213d0e2d4e956c43
 
 build:
-  number: 3
+  number: 0
   # the distributed binaries are already relocatable
   binary_relocation: false
   missing_dso_whitelist:
@@ -47,7 +47,7 @@ about:
   license: MIT AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND MPL-2.0 AND Zlib AND Unlicense
   license_family: MIT
   license_file: LICENSE
-  summary: 'Python bindings for the syntect Rust library'
+  summary: Python bindings for the syntect Rust library
 
   # The remaining entries in this section are optional, but recommended.
   description: |
