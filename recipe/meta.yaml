@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - posix  # [win]
+    - {{ stdlib('c') }}
     # - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - clang
@@ -33,6 +34,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
 
