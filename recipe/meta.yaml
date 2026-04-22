@@ -10,7 +10,7 @@ source:
   sha256: ffcb227dc57bffe6e194842944f8d16e49d77d6affd08c8c213d0e2d4e956c43
 
 build:
-  number: 0
+  number: 1
   # the distributed binaries are already relocatable
   binary_relocation: false
   missing_dso_whitelist:
@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - posix  # [win]
+    - {{ stdlib('c') }}
     # - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - clang
@@ -33,6 +34,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
 
