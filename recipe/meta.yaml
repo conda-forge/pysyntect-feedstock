@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: ffcb227dc57bffe6e194842944f8d16e49d77d6affd08c8c213d0e2d4e956c43
 
 build:
-  number: 0
+  number: 1
   # the distributed binaries are already relocatable
   binary_relocation: false
   missing_dso_whitelist:
@@ -21,6 +21,7 @@ requirements:
     - posix  # [win]
     # - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - clang
     - llvm
     - rust
